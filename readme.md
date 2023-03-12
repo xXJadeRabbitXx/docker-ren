@@ -1,3 +1,5 @@
+![image](https://github.com/xXJadeRabbitXx/docker-ren/blob/main/banner.png)
+
 Because SFU Ani's Renbot needs additional libraries we need to extend the existing image
 
 So far we only need `libzbar-dev` but more can be added if needed
