@@ -20,8 +20,7 @@ We need to do this because our application needs a token to connect to Discord A
 
 First we need to update the compose file with our token before running the script
 
-- Please copy the token code into the docker-compose file under the environment variable `TOKEN= 
-R TOKEN HERE`
+- Please copy the token code into the docker-compose file under the environment variable `TOKEN= YOUR TOKEN HERE`
 - then inside bash we can run `./run.sh`
 
 This will create the docker container, network, and volumes to save persistent data
