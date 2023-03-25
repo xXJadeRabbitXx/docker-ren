@@ -1,25 +1,24 @@
 version: "3.9"
 
 networks:
-  ren-network: 
+  ren-network:
     name: ren-network
     driver: bridge
 
 services:
   ren:
+    build:
+      context: .
     container_name: ren
-    image: ren
-    restart: always
+    restart: unless-stopped
     networks:
       - ren-network
     volumes:
-      - ren-data:/data
+      - type: bind
+        source: ./data/ren/data
+        target: /data
     environment:
-      - TOKEN= YOUR TOKEN HERE
-      - PREFIX=.
-      - TZ=America/Vancouver
+      - TOKEN=${TOKEN}
+      - PREFIX=${PREFIX:-.}
+      - TZ=${TIMEZONE:-America/Vancouver}
       - PUID=1000
-
-volumes:
-  ren-data:
-    name: ren-data
