@@ -9,6 +9,7 @@ services:
   ren:
     build:
       context: .
+    container_name: ren
     restart: unless-stopped
     networks:
       - ren-network
