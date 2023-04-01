@@ -22,8 +22,11 @@ We need to do this because our application needs a token to connect to Discord A
 
 First we need to update the compose file with our token before running the script
 
-- Please copy the token code into the docker-compose file under the environment variable `TOKEN= YOUR TOKEN HERE`
-- then inside bash we can run `./run.sh`
+- Create a `.env` file with the following environment variables:
+    - `TOKEN`: The bot's token from the Discord Developer Portal.
+    - `PREFIX`: The bot's prefix. Defaults to `.`
+    - `TIMEZONE`: The container's timezone. Defaults to `America/Vancouver`.
+- Run `docker compose up -d`.
 
 This will create the docker container, network, and volumes to save persistent data
 
