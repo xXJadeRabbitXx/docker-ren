@@ -14,9 +14,7 @@ services:
     networks:
       - ren-network
     volumes:
-      - type: bind
-        source: ./data/ren/data
-        target: /data
+      - ren-data:/data
     environment:
       - TOKEN=${TOKEN}
       - PREFIX=${PREFIX:-.}
