@@ -23,9 +23,11 @@ We need to do this because our application needs a token to connect to Discord A
 First we need to update the compose file with our token before running the script
 
 - Create a `.env` file with the following environment variables:
-    - `TOKEN`: The bot's token from the Discord Developer Portal.
-    - `PREFIX`: The bot's prefix. Defaults to `.`
+    - `TOKEN`: The bot's token from the Discord Developer Portal. Set this only if you're setting
+      it up for the first time.
+    - `PREFIX`: The bot's prefix. Set this only if you're setting it up for the first time.
     - `TIMEZONE`: The container's timezone. Defaults to `America/Vancouver`.
+    - `EXTRA_ARGS`: Extra arguments to pass into the invocation of `redbot`.
 - Run `docker compose up -d`.
 
 This will create the docker container, network, and volumes to save persistent data
