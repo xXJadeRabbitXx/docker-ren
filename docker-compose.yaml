@@ -17,6 +17,8 @@ services:
       - ren-data:/data
     environment:
       - TOKEN=${TOKEN}
-      - PREFIX=${PREFIX:-.}
+      - PREFIX=${PREFIX}
       - TZ=${TIMEZONE:-America/Vancouver}
       - PUID=1000
+      - CUSTOM_REDBOT_PACKAGE=git+https://github.com/SFUAnime/Ren.git@V3/testing
+      - EXTRA_ARGS=${EXTRA_ARGS}
