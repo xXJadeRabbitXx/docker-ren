@@ -22,3 +22,7 @@ services:
       - PUID=1000
       - CUSTOM_REDBOT_PACKAGE=git+https://github.com/SFUAnime/Ren.git@V3/testing
       - EXTRA_ARGS=${EXTRA_ARGS}
+
+volumes:
+  ren-data:
+    name: ren-data
